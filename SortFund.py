@@ -1,5 +1,7 @@
 from sys import exit
 
+#If you have less than $1000, you are sent here to calculate how long it would take
+#for your money to grow equal to or greater than the minimum amount required to invest.
 def choose(principal):
 	# Taken from the Allocator.py example	
 	savings = input('So, how much can you put into a savings account? $')
@@ -48,17 +50,17 @@ def schwab(principal):
 	schwab_portfolio2 = float(schwab_portfolio2)
 	schwab_portfolio3 = float(schwab_portfolio3)
 	
-	print """We recommend you use:\n
+	print """We recommend you use a Core-Three portfolio:
 	50% US Stock
 	20% International Stock
 	30% Bonds\n"""
 	
-	print """And so:
+	print """Which converts to:
 	$%.2f will be invested into SWTSX (US Stock), which is at $%.2f.
 	$%.2f will be invested into SWISX (Int'l Stock), which is at $%.2f.
 	$%.2f will be invested into SWLBX (Bond), which is at $%.2f.\n""" % (alloc1, SWTSX, alloc2, SWISX, alloc3, SWLBX)
 			
-	print """From your principal of $%.2f, we calculated your portfolio to have the following:
+	print """And from your principal of $%.2f, we calculated your portfolio to have the following:
 	%.2f shares of SWTSX
 	%.2f shares of SWISX
 	%.2f shares of SWLBX""" % (principal, schwab_portfolio1, schwab_portfolio2, schwab_portfolio3)
@@ -90,17 +92,17 @@ def vanguard(principal):
 	vanguard_portfolio2 = float(vanguard_portfolio2)
 	vanguard_portfolio3 = float(vanguard_portfolio3)
 	
-	print """We recommend you use:
+	print """We recommend you use a Core-Three portfolio:
 	50% US Stock
 	20% International Stock
 	30% Bonds\n"""
 	
-	print """And so:
+	print """Which converts to:
 	$%.2f will be invested into VTSMX (US Stock), which is at $%.2f.
 	$%.2f will be invested into VGTSX (Int'l Stock), which is at $%.2f.
 	$%.2f will be invested into VBMFX (Bond), which is at $%.2f.\n""" % (alloc1, VTSMX, alloc2, VGTSX, alloc3, VBMFX)
 			
-	print """From your principal of $%.2f, we calculated your portfolio to have the following:
+	print """And from your principal of $%.2f, we calculated your portfolio to have the following:
 	%.2f shares of VTSMX
 	%.2f shares of VGTSX
 	%.2f shares of VBMFX""" % (principal, vanguard_portfolio1, vanguard_portfolio2, vanguard_portfolio3)
